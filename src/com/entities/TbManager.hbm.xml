@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.entities.TbManager" table="ssh_tbmanager">
+    <id name="id">
+        <column name="ID" sql-type="int(11)"/>
+        <generator class="native"/>
+    </id>
+    <property name="name">
+        <column name="Name" sql-type="varchar(8)" not-null="true" />
+    </property>
+    <property name="parentInd">
+        <column name="ParentInd" sql-type="int(11)" not-null="true" />
+    </property>
+    <property name="theOrder">
+        <column name="TheOrder" sql-type="int(11)" not-null="true" />
+    </property>
+    <property name="theLever">
+        <column name="TheLever" sql-type="int(11)" not-null="true" />
+    </property>
+    <property name="childNum">
+        <column name="ChildNum" sql-type="int(11)" not-null="true" />
+    </property>
+    <property name="isLeaf">
+        <column name="IsLeaf" sql-type="boolean" not-null="true" />
+    </property>
+    <property name="delFlag">
+        <column name="DelFlag" sql-type="boolean" not-null="true" />
+    </property>
+    <property name="channel">
+        <column name="Channel" sql-type="varchar(8)" not-null="true" />
+    </property>
+
+</class>
+
+
+</hibernate-mapping>
